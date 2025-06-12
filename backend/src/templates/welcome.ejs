@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to <%= projectName %></title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 28px;
+            font-weight: 300;
+        }
+        .header .emoji {
+            font-size: 48px;
+            margin-bottom: 10px;
+            display: block;
+        }
+        .content {
+            padding: 40px 30px;
+        }
+        .greeting {
+            font-size: 24px;
+            color: #667eea;
+            margin-bottom: 20px;
+        }
+        .features {
+            background: #f8f9ff;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .features h3 {
+            color: #667eea;
+            margin-top: 0;
+        }
+        .features ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .features li {
+            margin: 8px 0;
+        }
+        .cta-button {
+            display: block;
+            width: 200px;
+            margin: 30px auto;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            text-align: center;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+        }
+        .help-section {
+            background: #fff9e6;
+            border-left: 4px solid #ffd700;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .footer {
+            background: #f8f9fa;
+            padding: 30px;
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+            border-top: 1px solid #eee;
+        }
+        .social-links {
+            margin: 20px 0;
+        }
+        .social-links a {
+            display: inline-block;
+            margin: 0 10px;
+            color: #667eea;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <span class="emoji">📁</span>
+            <h1>Welcome to <%= projectName %></h1>
+            <p>Your journey begins here!</p>
+        </div>
+        
+        <div class="content">
+            <div class="greeting">Hello <%= name %>! 👋</div>
+            
+            <p>We're absolutely thrilled to welcome you to our Project Management System! Your account has been successfully created with the email address: <strong><%= email %></strong></p>
+            
+            <div class="features">
+                <h3>🌟 What you can do now:</h3>
+                <ul>
+                    <li>🔐 Securely log in to your personal account</li>
+                    <li>📁 Create and manage your projects</li>
+                    <li>👥 Collaborate with your team</li>
+                    <li>📋 Track project progress and deadlines</li>
+                    <li>📎 Attach and share important documents</li>
+                    <li>🎯 Stay organized and productive</li>
+                </ul>
+            </div>
+            
+            <a href="<%= loginUrl %>" class="cta-button">Access Your Account</a>
+            
+            <div class="help-section">
+                <h3>💡 Need Assistance?</h3>
+                <p>Our dedicated support team is here to help you. Whether you have questions about your projects, need help with your account, or want to learn more about our features, don't hesitate to reach out!</p>
+                <p><strong>Contact us:</strong> <a href="mailto:<%= supportEmail %>"><%= supportEmail %></a></p>
+            </div>
+            
+            <p>We're committed to providing you with an exceptional project management experience. Thank you for choosing <%= projectName %> – we look forward to supporting your success!</p>
+            
+            <p style="margin-top: 30px;">
+                Warm regards,<br>
+                <strong>The <%= projectName %> Team</strong>
+            </p>
+        </div>
+        
+        <div class="footer">
+            <div class="social-links">
+                <a href="#">Facebook</a> |
+                <a href="#">Twitter</a> |
+                <a href="#">Instagram</a> |
+                <a href="#">LinkedIn</a>
+            </div>
+            <p>This email was sent to <%= email %>. If you didn't create an account with us, please contact our support team immediately.</p>
+            <p>&copy; <%= currentYear %> <%= projectName %>. All rights reserved.</p>
+            <p>🚀 Empowering teams, one project at a time.</p>
+        </div>
+    </div>
+</body>
+</html>
